@@ -2,7 +2,7 @@ process {
     Id = "deploymentprocess-Projects-2"
     OwnerId = "Projects-2"
     IsFrozen = false
-    Version = 1
+    Version = 2
     SpaceId = "Spaces-1"
     Steps {
         run_a_script {
@@ -56,6 +56,22 @@ process {
                             Key = "Octopus.Action.Script.ScriptBody"
                             Value {
                                 Value = ";"
+                                IsSensitive = false
+                                HasValue = true
+                            }
+                        }
+                        octopus.action.package.jsonconfigurationvariablesenabled {
+                            Key = "Octopus.Action.Package.JsonConfigurationVariablesEnabled"
+                            Value {
+                                Value = "True"
+                                IsSensitive = false
+                                HasValue = true
+                            }
+                        }
+                        octopus.action.enabledfeatures {
+                            Key = "Octopus.Action.EnabledFeatures"
+                            Value {
+                                Value = "Octopus.Features.JsonConfigurationVariables"
                                 IsSensitive = false
                                 HasValue = true
                             }
